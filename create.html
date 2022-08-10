@@ -9,12 +9,14 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,200;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
 </head>
 <body>
     <section class="coconut">
         <nav>
          <a href="create.html"><img src="images/th_7.jpg"></a>
-         <div class="nav-links">
+         <div class="nav-links" id="'navLinks">
+            <i class="fa fa-times" onclick="hideMenu();"></i>
              <ul>
                 <li><a href="">HOME</a></li>
                 <li><a href="">ABOUT</a></li>
@@ -22,14 +24,14 @@
                 <li><a href="">CONTACT</a></li>
                 <li><a href="">BLOG</a></li>
              </ul>
-
          </div>
+         <i class="fa fa-bars"onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
             <h1>worlds biggest university</h1>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae quod quo debitis fugiat neque deserunt<br>maiores voluptatum ducimus! Reiciendis temporibus perferendis, soluta atque accusamus natus non ab animi esse.
             </p>
-            <a href="" class="hero-btn">visit us to kmow more</a>
+            <a href="" class="hero-btn">visit us to know more</a>
         </div>
 
     </section>
@@ -45,5 +47,16 @@
  <button class="boot" >click me 
  </button> --> -->
     <!-- <img src="images/coconut.webp">  -->
+<!-- ---------Javascript for toggle Menu -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+function showMenu() {   
+    navLinks.style.right = "0";
+}
+function hideMenu() {   
+    navLinks.style.right = "-200px";
+}
+</script>
 </body>
 </html> 
